@@ -7,12 +7,20 @@
         </div>
         <div class="column">
           <h2 class="title">Lista de Usuarios</h2>
+
+          <div class="field">
+            <div class="control">
+              <input [(ngModel)]="searchText" (input)="filter()" class="input" type="text" placeholder="Buscar">
+            </div>
+
+          </div>
+
           <table class="table is-hoverable is-fullwidth">
             <thead>
               <tr>
                 <th class="has-text-centered">Índice</th>
-                <th class="has-text-centered">Cédula</th>
-                <th class="has-text-centered">Nombre</th>
+                <th class="has-text-centered"><a (click)="sortById()">Cédula</a></th>
+                <th class="has-text-centered"><a (click)="sortByNames()">Nombre</a></th>
                 <th class="has-text-centered">Cumpleaños</th>
                 <th class="has-text-centered">Actualizar</th>
                 <th class="has-text-centered">Eliminar</th>
@@ -24,8 +32,10 @@
                 <td class="has-text-centered">{{user.identification}}</td>
                 <td class="has-text-centered">{{user.name}}</td>
                 <td class="has-text-centered">{{user.birth_date.substring(0,10)}}</td>
-                <td class="has-text-centered"><a (click)="getUserById(user.id!)"><i class="fa-solid fa-magnifying-glass"></i></a></td>
-                <td class="has-text-centered"><a (click)="deleteUser(user.id!)"><i class="fa-solid fa-trash-can"></i></a></td>
+                <td class="has-text-centered"><a (click)="getUserById(user.id!)"><i
+                      class="fa-solid fa-magnifying-glass"></i></a></td>
+                <td class="has-text-centered"><a (click)="deleteUser(user.id!)"><i
+                      class="fa-solid fa-trash-can"></i></a></td>
               </tr>
             </tbody>
           </table>
