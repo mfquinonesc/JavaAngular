@@ -26,6 +26,14 @@ El backend está desarrollado con Java JDK 17, utilizando Maven, y Spring Boot p
 git clone https://github.com/mfquinonesc/JavaAngular.git
 ```
 
+- Configurar la base de datos según sus propias credenciales. En este caso está configurada en PostgreSQL. El nombre de la base de datos es `dbjavang`. La ruta del archivo para configurarla es `backend\src\main\resources\application.properties`
+
+```
+spring.datasource.url=jdbc:postgresql://localhost:5432/dbjavang
+spring.datasource.username=postgres
+spring.datasource.password=1234567
+``` 
+
 - Ubicarse dentro de la carpeta backend, encontrar el archivo `backend\src\main\java\dev\backend\BackendApplication.java` y ejecutar según el editor el Debug o Run.
 
 - La aplicación java se debe ejecutar en la ruta `http://localhost:8080/api/v1/user` que es el endpoint de la API.
@@ -34,11 +42,12 @@ git clone https://github.com/mfquinonesc/JavaAngular.git
 
 - La palicación se debe ejecutar en la ruta `http://localhost:4200/` .
 
+
 ## Capturas de la aplicación 
 
 ![Texto alternativo](images/home.png)
 
-<!-- ![Texto alternativo](images/validaciones.png) -->
+![Texto alternativo](images/validaciones.png)
 
 ## Funcionamiento 
 
