@@ -63,7 +63,7 @@ export class UserformComponent {
     this.userForm.setValue({
       name: '',
       birthdate: '',
-      identification: ''
+      identification: '0'
     });
   }
 
@@ -99,6 +99,6 @@ export class UserformComponent {
     }else{
       this.createUser();
     }   
-    this.isUpdate = false;
+    this.isUpdate = false;    
   }
 }

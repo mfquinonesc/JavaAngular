@@ -8,9 +8,9 @@
         <i class="fa-solid fa-pen"></i>
       </span>      
     </p>
-    <!-- <small *ngIf="name.invalid && (name.touched || name.dirty)">
+    <!-- <small class="has-text-danger" *ngIf="name.invalid && (name.touched || name.dirty)">
       Campo inválido
-    </small> -->
+    </small>  -->
   </div>
 
   <div class="field">
@@ -20,6 +20,9 @@
         <i class="fa-solid fa-pen"></i>
       </span>      
     </p>
+    <!-- <small class="has-text-danger" *ngIf="birthdate.invalid && (birthdate.touched || birthdate.dirty)">
+      Campo inválido
+    </small>  -->
   </div>
   <div class="field">
     <p class="control has-icons-left">
@@ -28,12 +31,20 @@
         <i class="fa-solid fa-pen"></i>
       </span>
     </p>
+    <!-- <small class="has-text-danger" *ngIf="identification.invalid && (identification.touched || identification.dirty)">
+      Campo inválido
+    </small> -->
   </div>
-  <div class="field">
+  <div class="field is-grouped">
     <p class="control">
       <button class="button is-success" (click)="submit()">
         Guardar
       </button>
-    </p>
+    </p>  
+    <p class="control">
+      <button class="button is-info" (click)="clearForm()">
+        Cancelar
+      </button>
+    </p>   
   </div>
 </form>
